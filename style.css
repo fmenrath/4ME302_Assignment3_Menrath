@@ -1,0 +1,884 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+
+/*-------------------------------------------------- General CSS*/
+html{ 
+    height:100%; 
+}
+
+body{
+    font-family: Roboto;
+    font-family: 'Open Sans';
+    font-family: 'Lato';
+    margin: 0px;
+    min-width: 500px;
+    background-color: #f7f8fa;
+
+}
+a{
+    text-decoration: none;
+}
+.content-container{
+    max-width: 970px;
+    padding: 25px 40px 25px;
+    border-radius: 3px;
+    margin: 0 auto;
+    margin-top: 2px;
+    background: rgba(254,254,254);
+    overflow: auto;
+    border: 1px solid #ecedf0;
+    box-shadow: 0 2px 4px rgb(0,0,0,0.05);
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+.content-container::-webkit-scrollbar{
+    display: none;
+}
+
+
+/*--------------------------------------------------Headings and stuff*/
+.head-text{
+    text-align: center;
+    color:#0c141b;
+    font-weight: normal;
+}
+.h1{
+    font-size:1.8em;
+    margin:0;
+}
+.h3{
+    font-size:1em;
+    margin: 10px 0;
+    /* font-weight: 300; */
+    color: #404244;
+}
+.heading{
+    font-size:1.5em;
+    margin:0;
+    font-weight: 600;
+    color: #393b3e;
+}
+
+
+/*--------------------------------------------------Header*/
+.header{
+    height: 50px;
+    background-color: #d0dfed;
+    background-color: #3d5974;
+}
+.header-elements{
+    height: 50px;
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.header-center{
+    position: relative;
+    right: 40px;
+}
+#app-name{
+    position: relative;
+    top: 14px;
+    font-size: 1.35em;
+    left: 20px;
+    font-weight: 300;
+    color: #fbfdfd;
+    transition: color 0.15s;
+    z-index: 20;
+}
+#app-name:hover{
+    color: #dae9ff;
+}
+
+.user-info{
+    text-align: center;
+    color: #e9f1f9;
+    font-weight: 300;
+    top: 17px;
+    margin: 0 auto;
+    position: relative;
+}
+.user-info i{
+    margin-left: 3px;
+}
+
+.btn-logout {
+    position: relative;
+    height: 23px;
+    width: 70px;
+    text-align: center;
+    padding-top: 7px;
+    top: 10px;
+    font-size: 0.95em;
+    right: 20px;
+    color: #fbfdfd;
+    transition: color 0.15s, background 0.15s;
+    background: #3c4f63;
+    border-radius: 2px;
+}
+.btn-logout:hover{
+    background: #36485a;
+}
+
+#nav-bar{
+    height: 45px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #d1d5db;
+    box-shadow: 0 2px 4px rgb(0,0,0,0.05);
+}
+#nav-content{
+    max-width: 1050px;
+    height: 45px;
+    margin: 0 auto;
+    display: flex;
+}
+#nav-content button{
+    color: #585858;
+    font-size: 1em;
+    font-family: Lato;
+    font-weight: 600;
+    background: none;
+    border: 3px solid transparent;
+    padding-top:2px;
+    width: 13%;
+    margin: 0 2px;
+    min-width: 120px;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.1s;
+}
+#nav-content button .las{
+    color: #696a6e;
+    position: relative;
+    top: 2px;
+}
+#nav-content button:hover{
+    color: #5d778d;
+}
+.nav-active{
+    padding-top: 3px;
+    border-bottom: 3px solid #5d778d !important;
+    color: #366893 !important;
+} 
+.nav-active .las{
+    color: #366893 !important;
+}
+
+#nav-bar .las{
+    font-size: 1.2em;
+    position: relative;
+    /* top: 2px; */
+}
+
+
+/*--------------------------------------------------Login*/
+.btn-card{
+    display: block;
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+    padding: 15px 20px 15px;
+    width: 300px;
+    height: 260px;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+}
+#note{
+    text-align: center;
+    font-size: 1.2em;
+    /* font-weight: 600; */
+    padding: 10px;
+    margin: 0 0 15px;
+    color: rgb(81 84 90);
+}
+#note-small{
+    position: absolute;
+    bottom: 10px;
+    left: 73px;
+}
+.btn-google, .btn-twitter, .btn-github{
+    appearance: button;
+    width: 220px;
+    margin: 15px auto;
+    display: block;
+    height: 32px;
+    padding-top: 12px;
+    border-radius: 3px;
+    font-size: 1.05em;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+    outline: none;
+}
+
+.btn-group button{
+    width: 220px;
+    margin: 10px auto;
+    display: block;
+    height: 44px;
+    padding-bottom: 3px;
+    font-family: Lato;
+    padding-right: 20px;
+    border-radius: 3px;
+    font-size: 1.1em;
+    text-align: center;
+    color: #1d3448;
+    border: 1px solid transparent;
+    outline: none;
+    cursor: pointer;
+    background-color: #f4f6f8;
+    transition: box-shadow 0.1s, background 0.1s;
+    border: 1px solid #cecece;
+}
+.btn-group button:hover{
+    /* background-color: #e5f3f5; */
+    box-shadow: 0 1px 4px rgb(0,0,0,0.2);
+    background: white;
+}
+
+.btn-group i{
+    margin-right: 5px;
+    font-size: 1.3em;
+    position: relative;
+    top: 1px;
+}
+.fab{
+    font-size: 1em !important;
+    top: 0px !important;
+}
+
+.btn-google{
+    background-color: #4885ed;
+    transition: background-color 0.1s;
+}
+.btn-google:hover{
+    background-color: #6196f1;
+}
+.btn-github{
+    background-color: #333;
+    transition: background-color 0.1s;
+}.btn-github:hover{
+    background-color: rgb(61, 61, 61);
+}
+.btn-twitter{
+    background-color: #1DA1F2;
+    transition: background-color 0.1s;
+}
+.btn-twitter:hover{
+    background-color:rgb(61, 181, 255);
+}
+.question{
+    margin: 20px auto;
+    display: table;
+    /* position: relative; */
+    /* float: right; */
+    /* right: 45px; */
+    font-size: 0.9em;
+    /* display: none; */
+}
+
+
+/*--------------------------------------------------Registration*/
+#registration{
+    display: grid;
+    width: 255px;
+    margin: 20px auto 0;
+}
+
+#registration input, #registration select{
+    outline: none;
+    height: 28px;
+    font-size: 0.9em;
+    padding-left: 12px;
+    font-family: 'Roboto';
+    background-color: #f5f6f8;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #d3d4da;
+}
+
+#email, #role{
+    color: #8c8c8c;
+    background-color:#e9e9e9 !important;
+}
+
+#registration label{
+    font-size: 0.85em;
+    font-family: 'Roboto';
+    font-weight: 600;
+    padding-left: 2px;
+    margin-bottom: 2px;
+}
+#btn-register{
+    width: 100px;
+    margin: 0 auto;
+    height: 32px;
+    font-family: 'Roboto';
+    font-size: 0.9em;
+    margin-top: 5px;
+    color: white;
+    background: #507690;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+#btn-register:hover{
+    background: #587d96;
+}
+#registration select{
+    height: 33px;
+}
+
+
+/*--------------------------------------------------Content*/
+/*------------------------------ Patients*/
+.patient-content{
+    text-align: left;
+}
+#video-list{
+    padding-inline-start: 0;
+}
+#video-list li{
+    font-size: 1.2em;
+    padding: 20px 0 5px;
+    list-style: none;
+}
+.video-descr{
+    color:grey;
+    font-size:0.9em;
+}
+.youtube-embed{
+    width: 380px;
+    height: 210px;
+    border: 1px solid grey;
+    box-shadow: 0 2px 4px rgb(0,0,0,0.2);
+    display: table;
+    margin: 0 auto 50px;
+}
+.videodesc{
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #2e4a60;
+    text-align: center;
+    margin-bottom: 13px;
+    padding-right: 10px;
+}
+#video-list{
+    width: 100%;
+}
+
+#video-list td{
+    padding: 15px;
+}
+.column{
+    width: 50%;
+    min-width: 250px;
+}
+#video-list-area{
+    display: flex;
+}
+#video-frame{
+    width:600px;
+    height:400px;
+    margin: 0 auto;
+}
+#video-list-area i{
+    font-size: 1.2em;
+    position: relative;
+    top: 1px;
+    margin-right: 2px;
+    padding: 4px;
+    color: #3d5974;
+}
+@media only screen and (max-width: 800px) {
+    #video-list-area{
+        display: unset;
+    }
+}
+
+/*------------------------------ Physician/Researcher*/
+.patient-list{
+    margin-top: 35px;
+    table-layout: auto;
+    width: 100%;
+    border-color:lightgray;
+    color:#27292b;
+    font-size: 0.95em;
+}
+.patient-list thead{
+    border-bottom: 1px solid grey;
+}
+.patient-list thead tr{
+    height: 50px;
+}
+.patient-list thead tr td{
+    font-weight: 600;
+}
+.patient-list tbody tr{
+    height: 55px;
+}
+.patient-list tbody tr td{
+    font-weight: 400;
+    padding: 0 7px;
+}
+.patient-list tbody tr:nth-child(even){
+    background: #fff;
+}
+.patient-list tbody tr:nth-child(odd){
+    background:  #fafafa;
+}
+.patient-list td{
+    text-align: center;
+    vertical-align: middle;
+}
+.patient-data-link{
+    color: #667a8b;
+}
+.data-select{
+    font-family: Roboto;
+    font-size: 0.9em;
+    outline: none;
+    border: 1px solid #a8a8a8;
+    padding: 2px;
+    border-radius: 2px;
+    height: 26px;
+}
+.btn-data-view, .btn-data-download, .btn-data-visualize, .btn-therapy-view, .btn-therapy-view-researcher{
+    background: none;
+    color: #465466;
+    outline: none;
+    padding: 2px 0 0 0px;
+    border: 1px solid transparent;    
+    font-size: 0.95em;
+    border-radius: 30px;
+    margin: 0 0 0 4px;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    position: relative;
+}
+.btn-data-view:hover, .btn-data-download:hover, .btn-data-visualize:hover, .btn-therapy-view:hover, .btn-therapy-view-researcher:hover{
+    color: #345888;
+}
+.btn-data-view i, .btn-data-download i, .btn-data-visualize i, .btn-therapy-view i, .btn-therapy-view-researcher i{
+    font-size: 1em;
+}
+.download-area{
+    position: relative;
+    left: 10px;
+    width: 160px;
+    display: inline-flex;
+}
+
+/*RSS*/
+.rss-feed{
+    max-width: 680px;
+    text-align: justify;
+    line-height: 1.4;
+    margin-top: 30px;
+    padding: 0 0 0 0px;
+}
+.feed-item-title a{
+    color: #2a5e8b;
+    font-weight: 500;
+    font-family: Roboto Slab;
+    font-size: 1em;
+}
+.feed-item-title{
+    margin-bottom: 4px;
+    margin-top: 0;
+    text-align: left;
+}
+.feed-item-desc{
+    color: #3b3b3b;
+    margin: 0 0 25px;
+    font-weight: 400;
+    font-size: 0.9em;
+}
+.pub-date{
+    font-size: 0.8em;
+    color: #6d6e74;
+    margin-top: 0;
+}
+
+
+/*--------------------------------------------------Profile Page*/
+.profile-area{
+    display: flex;
+    width: 100%;
+}
+.profile-th{
+    text-align: left;
+    width: 90px !important;
+    height: 30px;
+    color: #313438;
+    font-weight: 600;
+    padding-left: 20px;
+}
+.profile-td{
+    text-align: left;
+    width: 70%;
+    color: #313438;
+    font-weight: 400;
+}
+#table-profile{
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+#table-profile tr:nth-child(even){
+    background: #fff;
+}
+#table-profile tr:nth-child(odd){
+    background:  #fafafa;
+}#table-profile tr{
+    border-bottom: 1px solid #dfe3e8;
+    border-top: 1px solid #dfe3e8;
+}
+#profile-picture{
+    width: 120px;
+    display: flex;
+    margin: 10px 20px 0 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0,0,0,0.1);
+}
+#profile-pic-text{
+    display: none;
+}
+
+/*------------------------------ CSV Modal Window*/
+#data-modal{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    width: 95%;
+    max-width: 1150px;
+    border-radius: 3px;
+    height: 95%;
+    overflow: auto;
+    background-color: rgb(255 255 255);
+    border: 1px solid #cbccd0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 12px rgb(0,0,0,0.2);
+}
+.modal-content{
+    padding: 30px 40px 0 40px
+}
+.modal-top{
+    display: flex;
+    justify-content: space-between;
+}
+#modal-close{
+    font-size: 1.4em;
+    float: right;
+    height: 20px;
+    color: #949fa9;
+    transition: color 0.15s;
+}
+#modal-close:hover, #modal-close:focus {
+  color: rgb(66, 72, 77);
+  cursor: pointer;
+}
+#modal-heading{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 0;
+    float: left;
+    color: #476b91;
+}
+.modal-csv-table{
+    max-width: 900px;
+    text-align: center;
+}
+.modal-csv-table table{
+    border-collapse: collapse;
+}
+.modal-csv-table td{
+    width: 100px;
+}
+.modal-csv-table tr{
+    height: 22px;
+    border-bottom: 1px solid #e3e2e2;
+}
+.modal-csv-table th{
+    height: 35px;
+}
+.modal-csv-table tr:nth-child(even){
+    background: #fff;
+}
+.modal-csv-table tr:nth-child(even){
+    background:  #fafafa;
+}
+
+/* ------------------------- Assignment 3 stuff
+/* Alternative*/
+#modal-subheading-exercise, #modal-subheading-patient{
+    text-align: left;
+    color: #333;
+    margin: 0 0 10px;
+    font-size: 1.05em;
+}
+/* Annotation feature*/
+#annotation{
+    width: 70%;
+    min-width: 500px;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+#annotation-heading{
+    height: 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 0;
+    padding-top: 15px;
+    padding-left: 25px;
+}
+#notes{
+    margin: 0 20px;
+    padding: 0;
+}
+#notes li{
+    list-style: none;
+    background: #ffffff;
+    padding: 7px 15px 7px 15px;
+    margin: 10px 0;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgb(0,0,0,0.2);
+    background: #fdfdfd;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 2px 1px rgb(0,0,0,0.2);
+}
+#notes li label{
+    color: #3d73a9;
+    font-size: 0.9em;
+}
+#notes li p{
+    margin: 0;
+    font-size: 0.95em;
+}
+#comment{
+    margin: 15px 20px 0 20px;
+    padding: 20px;
+    border-radius: 3px;
+    padding: 8px 0 8px 0;
+    outline: none;
+    background: #f1f1f1;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 2px 1px rgb(0,0,0,0.2);
+}
+#comment-form{
+    margin: 0 15px;
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 92%;
+    font-size: 0.95em;
+    font-family: Lato;
+}
+#delete-comment{
+    cursor: pointer;
+    float: right;
+    font-size: 1.3em;
+    color: grey;
+    position: relative;
+    bottom: 30px;
+    background: none;
+    border: none;
+    outline:none;
+}
+#delete-comment:hover{
+    color: rgb(97, 97, 97);
+}
+#submit-comment{
+    cursor: pointer;
+    float: right;
+    font-size: 1.3em;
+    color: grey;
+    position: relative;
+    bottom: 23px;
+    right: 10px;
+    background: none;
+    border: none;
+    outline:none;
+}
+
+/* Patient view*/
+.exercise-columns{
+    display: flex;
+}
+.exercise-list-item{
+    height: 20px;
+    display: block;
+    max-width: 300px;
+    background: #f4f4f4;
+    border: 1px solid #e8e8e8;
+    padding: 7px 15px 7px 15px;
+    margin: 10px auto;
+    border-radius: 3px;
+    box-shadow: 0 2px 1px rgb(0,0,0,0.2);
+}
+.item-name{
+    margin: 0;
+    float: left;
+    position: relative;
+    top: 1px;
+    left: 5px;
+    color: #333;
+}
+.list-item-buttons{
+    float: right;
+    position: relative;
+    bottom: 3px;
+}
+#btn-return-overview{
+    height: 19px;
+    background: #4c6685;
+    padding: 6px 12px 22px;
+    border-radius: 3px;
+    font-family: Lato;
+    font-size: 0.95em;
+    color: white;
+    float: right;
+    position: relative;
+    bottom: 30px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+#btn-return-overview:hover{
+    background: #495f79;
+}
+#patient-view-top{
+    display: block;
+}
+.patient-view-heading{
+    font-size: 1.1em;
+    color: #203049;
+    font-weight: 600;
+    margin: 30px 0 10px;
+    letter-spacing: 0.02em;
+    padding-left: 2px;
+}
+#patient-view-content table{
+    border-collapse: collapse;
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 0.95em;
+    border: 1px solid lightgrey;
+    box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.015);
+}
+#patient-view-content thead{
+    background: #f4f5f6;
+    background: #557493;
+}
+#patient-view-content td{
+    min-width: 100px;
+    padding: 8px 15px;
+    color: #333;
+}
+#patient-view-content tr{
+    height: 32px;
+    /* border-bottom: 1px solid #e3e2e2; */
+}
+#patient-view-content thead tr{
+    height: 35px;
+}
+#patient-view-content th{
+    font-weight: 400;
+    color: #f4f5f6;
+    padding: 8px 15px;
+}
+#patient-view-content tr:nth-child(even){
+    background: #fff;
+}
+#patient-view-content tr:nth-child(even){
+    background: #f5f5f5;
+}
+.test-session-list{
+    width: 100%;
+}
+.exercise-heading{
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: center;
+    color: #203049;
+}
+
+/*Reseracher Map View*/
+#map {
+    height: 400px !important;
+    border: 1px solid lightgrey;
+    margin-top:25px;
+}
+.leaflet-popup-content-wrapper{
+    background: rgb(255,255,255,0.97);
+    border-radius: 5px;
+}
+.leaflet-popup-content{
+    margin: 10px 14px 5px;
+    font-size: 1.1em;
+    font-family: Lato;
+}
+.activity-link{
+    background: #eeeeee;
+    text-align: center;
+    display: block;
+    border-radius: 3px;
+    margin: 5px auto;
+    max-width: 110px;
+    padding: 4px 7px;
+    outline: none;
+    border: none;
+    font-family: Lato;
+    cursor: pointer;
+    border: 1px solid lightgrey;
+    transition: background 0.1s;
+}
+.activity-link:hover{
+    background: #e9e9e9;
+}
+.leaflet-touch .leaflet-bar {
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgb(0,0,0,0.1);
+}
+.leaflet-touch .leaflet-bar a {
+    color: #333;
+}
+
+/*Charts*/
+#chart-area{
+    display: flex;
+}
+#main-chart{
+    width: 480px;
+}
+#chart-area2{
+    width: 100%;
+    display: block !important;
+}
+#secondary-chart{
+    height: 220px;
+}
+#third-chart{
+    /* background: #ffabab; */
+    height: 220px;
+}
+.c3-circle {
+    fill: currentColor;
+    opacity: 0.75 !important;
+}
+.c3 path, .c3 line {
+    fill: none;
+    stroke: #696969;
+}
